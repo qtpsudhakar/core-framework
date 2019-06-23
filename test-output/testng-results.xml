@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "featureFile">Feature File: Login.feature</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "feature">Feature: As a user I want to login to Orange HRM portal</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario: As a admin user want to login in Orange HRM portal</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in HRM portal login Page (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  I enter HRM username &quot;Admin&quot; and password &quot;admin123&quot; (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I click on login button (passed : 1s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  I should be in HRM portal dashboard page (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  I should see the title of the page is &quot;OrangeHRM&quot; (passed : 1s)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="18083" started-at="2019-05-28T04:25:31Z" finished-at="2019-05-28T04:25:49Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestBase.feature(com.automation.cucumber.CucumberFeatureWrapper)[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="feature" class="com.automation.testbase.TestBase"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="WebBasedTesting" duration-ms="18083" started-at="2019-05-28T04:25:31Z" finished-at="2019-05-28T04:25:49Z">
+      <class name="com.automation.testrunners.WebTestRunner">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="beforeSuite" is-config="true" duration-ms="17" started-at="2019-05-28T04:25:31Z" finished-at="2019-05-28T04:25:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="beforeTest" is-config="true" duration-ms="4" started-at="2019-05-28T04:25:31Z" finished-at="2019-05-28T04:25:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="setUpClass" is-config="true" duration-ms="11594" started-at="2019-05-28T04:25:31Z" finished-at="2019-05-28T04:25:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@69b0fd6f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-28T04:25:43Z" finished-at="2019-05-28T04:25:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="feature(com.automation.cucumber.CucumberFeatureWrapper)[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="feature" duration-ms="4217" started-at="2019-05-28T04:25:43Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-05-28T04:25:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[As a user I want to login to Orange HRM portal]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "featureFile">Feature File: Login.feature</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "feature">Feature: As a user I want to login to Orange HRM portal</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario: As a admin user want to login in Orange HRM portal</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in HRM portal login Page (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  I enter HRM username &quot;Admin&quot; and password &quot;admin123&quot; (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I click on login button (passed : 1s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  I should be in HRM portal dashboard page (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  I should see the title of the page is &quot;OrangeHRM&quot; (passed : 1s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-28T04:25:47Z" finished-at="2019-05-28T04:25:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="tearDownClass" is-config="true" duration-ms="2098" started-at="2019-05-28T04:25:47Z" finished-at="2019-05-28T04:25:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="afterTest" is-config="true" duration-ms="1" started-at="2019-05-28T04:25:49Z" finished-at="2019-05-28T04:25:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.testrunners.WebTestRunner@3b084709]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-28T04:25:49Z" finished-at="2019-05-28T04:25:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.automation.testrunners.WebTestRunner -->
+    </test> <!-- WebBasedTesting -->
+  </suite> <!-- Suite -->
+</testng-results>

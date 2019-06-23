@@ -1,0 +1,7 @@
+com\automation\web\steps\LoginSteps.class
+com\automation\web\steps\WebHooks.class
+com\automation\mobile\pages\LoginPage.class
+com\automation\mobile\steps\MobileHooks.class
+com\automation\mobile\steps\LoginSteps.class
+com\automation\web\pages\LoginPage.class
+com\automation\web\pages\HomePage.class
