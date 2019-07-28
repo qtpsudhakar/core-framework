@@ -1,11 +1,13 @@
 #Ommit Target folder content for commit
-*/target/**
+target/**
 
 # Compiled class file
 *.class
 
 # Log file
 *.log
+
+*.classpath
 
 #Settings File
 *.settings
@@ -29,3 +31,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+target
+/*.classpath
+.project
+test-output

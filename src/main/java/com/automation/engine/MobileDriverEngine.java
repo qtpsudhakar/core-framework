@@ -27,6 +27,7 @@ public class MobileDriverEngine extends CoreEngine {
 		// Instantiate Appium Driver
 		try {
 			AppiumDriver<MobileElement> driver = new AppiumDriver<MobileElement>(new URL(appiumHub), caps);
+			
 		} catch (MalformedURLException e) {
 			System.out.println(e.getMessage());
 		}
