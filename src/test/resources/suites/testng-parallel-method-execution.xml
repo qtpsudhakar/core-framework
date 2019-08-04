@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" parallel="tests" thread-count="2">
+	<test name="WebBasedTesting1" enabled = "true">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.test1.TestFile" />
+		</classes>
+	</test>
+	<test name="WebBasedTesting2" enabled = "true">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.test1.TestFile" />
+		</classes>
+	</test>
+</suite>

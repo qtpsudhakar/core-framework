@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="test1" />
+		</run>
+	</groups>
+	<test name="WebBasedTesting">
+		<groups>
+			<run>
+				<include name="test3" />
+				<exclude name="test4"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.qa.test1.NewTest" />
+		</classes>
+	</test>
+</suite>
