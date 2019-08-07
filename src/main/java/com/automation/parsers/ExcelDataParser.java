@@ -13,6 +13,12 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.automation.connections.DBConnection;
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
+
 public class ExcelDataParser {
 
 	private final String xlFilePath = System.getProperty("user.dir") + "/src/test/resources/testdata/";
@@ -20,14 +26,44 @@ public class ExcelDataParser {
 	private static final String xlFileName = "sample-data.xlsx";
 	private static final String xlSheetName = "Data";
 
+	static Fillo fillo = new Fillo();
+	static Connection connection;
+	static Recordset recordset;
+	String query = "select * from Data";
+
 	public static void main(String args[]) throws IOException {
 		ExcelDataParser excelDataParser = new ExcelDataParser();
 		excelDataParser.readDataFromExcel(xlFileName, xlSheetName);
 		excelDataParser.writeDataIntoExcel(xlFileName, xlSheetName);
 		excelDataParser.readExcel(2);
+		excelDataParser.getExcelDataAsDatabase();
+	}
+	
+	//get excel data as database
+
+	public void getExcelDataAsDatabase() {
+		try {
+			connection = fillo.getConnection(xlFilePath + xlFileName);
+			recordset = connection.executeQuery(query);
+			System.out.println("========================================");
+			System.out.println("excel data fetch as database");
+			while (recordset.next()) {
+				System.out.println(recordset.getField("testCaseName"));
+				System.out.println(recordset.getField("username"));
+				System.out.println(recordset.getField("password"));
+				System.out.println(recordset.getField("errormessage"));
+
+				System.out.println("========================================");
+			}
+
+			recordset.close();
+			connection.close();
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 	}
 
-	//Read cell from a row
+	// Read cell from a row
 	public void readExcel(int rowcounter) throws IOException {
 
 		XSSFWorkbook srcBook = new XSSFWorkbook(xlFilePath + xlFileName);
