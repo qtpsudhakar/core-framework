@@ -5,11 +5,9 @@
 
 	<test name="MbileBasedTesting" enabled="true">
 		<parameter name="device" value="Poco F1" />
-		<parameter name="features" value="src/test/resources/features/mobile" />
-		<parameter name="glue" value="com.automation.mobile.steps" />
 		<parameter name="tags" value="@HRMLogin" />
 		<classes>
-			<class name="com.automation.testrunners.MobileTestRunner" />
+			<class name="com.automation.mobile.runner.MobileTestRunner" />
 		</classes>
 	</test>
 

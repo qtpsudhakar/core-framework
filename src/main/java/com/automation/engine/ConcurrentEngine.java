@@ -23,9 +23,8 @@ public class ConcurrentEngine {
 
 	public static void destroyEngine() {
 		if (engines.containsKey(Thread.currentThread().getId())) {
-			if (!getEngine().getWebDriver().toString().contains("null")) {
+			if (!getEngine().getWebDriver().toString().contains("null"))
 				cleanUpDriverProcesses();
-			}
 			engines.remove(Thread.currentThread().getId());
 		}
 	}

@@ -1,6 +1,5 @@
 package com.automation.cucumber;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -41,18 +40,15 @@ public class TestNgCucumberRunner {
 	private final RuntimeOptions runtimeOptions;
 	private ClassLoader classLoader;
 	private ResourceLoader resourceLoader;
-	private TestNgParamParser paramParser;
-
-	@SuppressWarnings("unchecked")
+	
 	public TestNgCucumberRunner(ITestContext context, Class<?> clazz) {
 		
 		Map<String, String> allParameters = context.getCurrentXmlTest().getAllParameters();
 
 		this.classLoader = clazz.getClassLoader();
 		resourceLoader = new MultiLoader(classLoader);
-		paramParser = new TestNgParamParser(resourceLoader);
-		List<URI> featurePaths = null;
-
+		new TestNgParamParser(resourceLoader);
+		
 		RuntimeOptionsFactory runtimeOptionsFactory = new RuntimeOptionsFactory(clazz);
 		runtimeOptions = runtimeOptionsFactory.create();
 

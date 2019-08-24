@@ -6,7 +6,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="tags" value="@HRMLogin" />
 		<classes>
-			<class name="com.automation.web.runner.WebTestRunner" />
+			<class name="com.automation.webservice.runner.WebServiceTestRunner" />
 		</classes>
 	</test>
 

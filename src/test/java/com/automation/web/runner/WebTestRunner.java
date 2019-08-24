@@ -4,5 +4,9 @@ import com.automation.testbase.TestBase;
 
 import cucumber.api.CucumberOptions;
 
-@CucumberOptions(monochrome = true, strict = false, dryRun = false)
+@CucumberOptions(features = "src/test/resources/features/web",
+				glue = "com.automation.web.steps",
+				monochrome = true, 
+				strict = false, 
+				dryRun = false)
 public class WebTestRunner extends TestBase {}
