@@ -9,105 +9,101 @@
 	<packaging>jar</packaging>
 	<name>core-framework</name>
 	<url>http://maven.apache.org</url>
+	
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<test.environment>qa</test.environment>
-		<test.browser>chrome</test.browser>
-		<test.device>Poco F1</test.device>
-		<selenium.java.version>3.141.59</selenium.java.version>
-		<webdrivermanager.java.version>3.6.0</webdrivermanager.java.version>
-		<extentreports.java.version>4.0.9</extentreports.java.version>
-		<cucumber.version>1.2.5</cucumber.version>
-		<cucumber.gherkin.version>2.12.2</cucumber.gherkin.version>
-		<testng.version>6.14.3</testng.version>
-		<fillo.api.version>1.19</fillo.api.version>
-		<log.4j.version>1.2.17</log.4j.version>
-		<gson.version>2.8.5</gson.version>
-		<java.appium.client.version>7.0.0</java.appium.client.version>
-		<apache.poi.version>4.0.1</apache.poi.version>
+		<environment>qa</environment>
+		<browser>chrome</browser>
+		<device>Poco F1</device>
+		<suiteFile>testng.xml</suiteFile>
 	</properties>
+	
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>4.3.0</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
 		<dependency>
 			<groupId>com.sikulix</groupId>
 			<artifactId>sikulixapi</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-		<dependency>
-			<groupId>io.appium</groupId>
-			<artifactId>java-client</artifactId>
-			<version>${java.appium.client.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>${selenium.java.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
-		<!-- <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-api</artifactId> 
-			<version>3.141.59</version> </dependency> -->
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>${webdrivermanager.java.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>${extentreports.java.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>${cucumber.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-jvm</artifactId>
-			<version>${cucumber.version}</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-core</artifactId>
-			<version>${cucumber.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>gherkin</artifactId>
-			<version>${cucumber.gherkin.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-testng</artifactId>
-			<version>${cucumber.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>${testng.version}</version>
+			<version>4.0.9</version>
 		</dependency>
 		<dependency>
 			<groupId>com.codoid.products</groupId>
 			<artifactId>fillo</artifactId>
-			<version>${fillo.api.version}</version>
+			<version>1.19</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>${apache.poi.version}</version>
+			<version>4.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>${log.4j.version}</version>
+			<version>1.2.17</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
-			<version>${gson.version}</version>
+			<version>2.8.5</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -133,15 +129,17 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
+				<version>2.22.0</version>
 				<configuration>
-					<includes>
-						<include>**/TestRunner.java</include>
-					</includes>
+					<suiteXmlFiles>
+						<suiteXmlFile>${basedir}/src/test/resources/suites/${suiteFile}</suiteXmlFile>
+					</suiteXmlFiles>
+					<systemPropertyVariables>
+						<browser>${browser}</browser>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 		</plugins>

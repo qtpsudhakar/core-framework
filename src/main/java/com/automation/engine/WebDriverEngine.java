@@ -1,13 +1,13 @@
 package com.automation.engine;
 
+import static com.automation.utilities.Config.*;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.automation.utility.Config;
-
-import static com.automation.utility.Config.*;
+import com.automation.utilities.Config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 

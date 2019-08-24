@@ -1,4 +1,4 @@
-package com.automation.web.steps;
+package com.automation.webservice.steps;
 
 import static com.automation.reporting.ExtentReportManager.reportFail;
 import static com.automation.reporting.ExtentReportManager.reportInfo;

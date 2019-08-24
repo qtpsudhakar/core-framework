@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class MobileDriverEngine extends CoreEngine {
+public class MobileDriverEngine extends Engine {
 
 	public static String appiumHub = "http://0.0.0.0:4723/wd/hub";
 
