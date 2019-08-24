@@ -10,14 +10,14 @@ package com.automation.utilities;
  * 2. Implementing the Runnable Interface
  */
 
-public class MultiThreading_By_Runnable_Interface implements Runnable {
+public class MultiThreadingByRunnableInterface implements Runnable {
 
 	private Thread t;
 	private String threadName;
 
 	// 2 Create Threads by using Runnable Interface
 
-	MultiThreading_By_Runnable_Interface(String name) {
+	MultiThreadingByRunnableInterface(String name) {
 		threadName = name;
 		System.out.println("Creating " + threadName);
 	}
@@ -47,10 +47,10 @@ public class MultiThreading_By_Runnable_Interface implements Runnable {
 	// Main Class
 	static class Multithread {
 		public static void main(String[] args) throws InterruptedException {
-			MultiThreading_By_Runnable_Interface R1 = new MultiThreading_By_Runnable_Interface("Thread-1");
+			MultiThreadingByRunnableInterface R1 = new MultiThreadingByRunnableInterface("Thread-1");
 			R1.start();
 
-			MultiThreading_By_Runnable_Interface R2 = new MultiThreading_By_Runnable_Interface("Thread-2");
+			MultiThreadingByRunnableInterface R2 = new MultiThreadingByRunnableInterface("Thread-2");
 			R2.start();
 		}
 

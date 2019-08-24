@@ -29,11 +29,11 @@ public class ConcurrentEngine {
 			engines.remove(Thread.currentThread().getId());
 		}
 	}
-	
-	public static void closeDriver(){
+
+	public static void closeDriver() {
 		getEngine().getWebDriver().close();
 	}
-	
+
 	public static void cleanUpDriverProcesses() {
 		getEngine().getWebDriver().quit();
 	}

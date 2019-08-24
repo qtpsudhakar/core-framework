@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class TextFileDataParser {
+public class TextFileParser {
 
 	private static final String txtFilePath = System.getProperty("user.dir") + "/src/test/resources/testdata/";
 

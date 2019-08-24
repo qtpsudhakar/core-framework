@@ -39,7 +39,7 @@ import cucumber.api.Scenario;
 public class TestBase implements IExecutionListener {
 
 	public static Properties props;
-	private String propertiesFile = "Config.properties";
+	private String propertiesFile = "project.properties";
 	private boolean remoteExecution;
 	private static String extentReport;
 	private static String reportPath;

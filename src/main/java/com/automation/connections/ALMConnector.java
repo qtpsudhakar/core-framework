@@ -26,6 +26,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.xml.sax.SAXException;
 
+import com.automation.parsers.XMLParser;
+
 public class ALMConnector {
 
 	public static String USERNAME = "SRV-NWLAUTOQCUSER";
@@ -33,13 +35,6 @@ public class ALMConnector {
 	public static String ALM_URL = "http://vm-hpqcalm01t:8080/qcbin";
 	public static String PROJECT_NAME = "Sample_Testqa";
 	public static String DOMAIN_NAME = "DEFAULT";
-
-	/*
-	 * public static String USERNAME = "ssamantaray"; public static String PASSWORD
-	 * = "Websterbank@124"; public static String ALM_URL =
-	 * "http://vm-hpqcalm01p:8080/qcbin"; public static String PROJECT_NAME =
-	 * "WOL_Defect_Tracking"; public static String DOMAIN_NAME = "ECOMMERCE";
-	 */
 
 	public static String SIGNIN_URI = ALM_URL + "/api/authentication/sign-in";
 	public static String TEST_INSTANCES_URI = ALM_URL + "/rest/domains/" + DOMAIN_NAME + "/projects/" + PROJECT_NAME
@@ -97,7 +92,7 @@ public class ALMConnector {
 				.toString(new InputStreamReader(((HttpResponse) apiData.get("response")).getEntity().getContent()));
 		System.out.println("Test Case ID List RESPONSE STRING - " + respStr);
 
-		Map<String, Map<String, String>> mapTestEntityList = LocalParseUtils.getTestEntityDetails(respStr);
+		Map<String, Map<String, String>> mapTestEntityList = XMLParser.getTestEntityDetails(respStr);
 		return mapTestEntityList;
 	}
 
@@ -197,7 +192,7 @@ public class ALMConnector {
 		String respStr = IOUtils
 				.toString(new InputStreamReader(((HttpResponse) apiData.get("response")).getEntity().getContent()));
 
-		List<String> mapTestEntityList = LocalParseUtils.getRunStepIDDetails(respStr);
+		List<String> mapTestEntityList = XMLParser.getRunStepIDDetails(respStr);
 
 		String stepsBody = "<Entity Type='run-step'>\r\n" + " <Fields>\r\n" + "  <Field Name='status'><Value>" + status
 				+ "</Value></Field>\r\n" + " </Fields>\r\n" + "</Entity>";

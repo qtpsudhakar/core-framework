@@ -18,6 +18,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.automation.actions.WebActions;
 import com.automation.reporting.ReportLibrary;
+import com.automation.testbase.TestBase;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -27,22 +28,6 @@ public class Engine {
 	private WebActions webActions;
 	private ReportLibrary reportLibrary;
 	private String browser, browserVersion;
-
-	public String getBrowser() {
-		return browser;
-	}
-
-	public void setBrowser(String browser) {
-		this.browser = browser;
-	}
-
-	public String getBrowserVersion() {
-		return browserVersion;
-	}
-
-	public void setBrowserVersion(String browserVersion) {
-		this.browserVersion = browserVersion;
-	}
 
 	public Engine() {
 		initialize();
@@ -142,7 +127,7 @@ public class Engine {
 	public EventFiringWebDriver setUpLocalChromeDriver(Capabilities caps) throws Exception {
 		EventFiringWebDriver webDriver;
 		ChromeOptions options = (ChromeOptions) caps;
-		WebDriverManager.chromedriver().version("").setup();
+		WebDriverManager.chromedriver().version(TestBase.props.getProperty("chrome.driver.binary.version")).setup();
 
 		if (caps == null)
 			webDriver = new EventFiringWebDriver(ThreadGuard.protect(new ChromeDriver()));
@@ -155,7 +140,7 @@ public class Engine {
 	public EventFiringWebDriver setUpLocalFirefoxDriver(Capabilities caps) throws Exception {
 		EventFiringWebDriver webDriver;
 		FirefoxOptions options = (FirefoxOptions) caps;
-		WebDriverManager.firefoxdriver().version("").setup();
+		WebDriverManager.firefoxdriver().version(TestBase.props.getProperty("firefox.driver.binary.version")).setup();
 
 		if (caps == null)
 			webDriver = new EventFiringWebDriver(ThreadGuard.protect(new FirefoxDriver()));
@@ -168,7 +153,8 @@ public class Engine {
 	public EventFiringWebDriver setUpLocalIeDriver(Capabilities caps) throws Exception {
 		EventFiringWebDriver webDriver;
 		InternetExplorerOptions options = (InternetExplorerOptions) caps;
-		WebDriverManager.iedriver().version("").setup();
+		WebDriverManager.iedriver().version(TestBase.props.getProperty("ie.driver.binary.version")).setup();
+		
 		if (caps == null)
 			webDriver = new EventFiringWebDriver(ThreadGuard.protect(new InternetExplorerDriver()));
 		else
@@ -176,5 +162,22 @@ public class Engine {
 
 		return webDriver;
 	}
+	
+	public String getBrowser() {
+		return browser;
+	}
+
+	public void setBrowser(String browser) {
+		this.browser = browser;
+	}
+
+	public String getBrowserVersion() {
+		return browserVersion;
+	}
+
+	public void setBrowserVersion(String browserVersion) {
+		this.browserVersion = browserVersion;
+	}
+
 
 }

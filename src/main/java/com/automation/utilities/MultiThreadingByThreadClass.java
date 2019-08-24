@@ -10,7 +10,7 @@ package com.automation.utilities;
  * 2. Implementing the Runnable Interface
  */
 
-public class MultiThreading_By_Thread_Class extends Thread {
+public class MultiThreadingByThreadClass extends Thread {
 
 	// 1 = Thread creation by extending java.lang.Thread class
 
@@ -29,7 +29,7 @@ public class MultiThreading_By_Thread_Class extends Thread {
 		public static void main(String[] args) {
 			int n = 8;
 			for (int i = 0; i < 8; i++) {
-				MultiThreading_By_Thread_Class multiThreading = new MultiThreading_By_Thread_Class();
+				MultiThreadingByThreadClass multiThreading = new MultiThreadingByThreadClass();
 
 				// Step2: to create a new Thread
 				multiThreading.start();

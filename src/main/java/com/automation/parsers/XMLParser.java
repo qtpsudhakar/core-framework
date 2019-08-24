@@ -1,4 +1,4 @@
-package com.automation.connections;
+package com.automation.parsers;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class LocalParseUtils {
+public class XMLParser {
 
 	public static Document getXML(String xmlDom) throws SAXException, IOException, ParserConfigurationException {
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
