@@ -20,7 +20,7 @@ public class SikuliX {
 
 		Screen screen = new Screen();
 		Pattern loginButton = new Pattern(
-				System.getProperty("user.dir") + "/src/test/resources/images/loginButton.png");
+				System.getProperty("user.dir") + "/src/test/resources/sikulix-images/loginButton.png");
 		WebDriverManager.chromedriver().version(driverBinaryVersion).setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
